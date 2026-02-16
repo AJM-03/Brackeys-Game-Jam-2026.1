@@ -7,7 +7,7 @@ using static UnityEditor.Timeline.TimelinePlaybackControls;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController characterController;
-    [SerializeField] private Transform cam;
+    private Transform cam;
 
     [SerializeField] private float movementSpeed = 10f;
 
@@ -17,18 +17,21 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+        cam = Camera.main.transform;
     }
 
 
     private void Update()
     {
-        Vector3 move = moveInput * movementSpeed * Time.deltaTime;
+        transform.right = cam.right;
+        Vector3 move = transform.forward * moveInput.y + transform.right * moveInput.x;
+        move *= movementSpeed * Time.deltaTime;
         characterController.Move(move);
     }
 
 
     public void Move(InputAction.CallbackContext context)
     {
-        moveInput = transform.forward * context.ReadValue<Vector2>().y + transform.right * context.ReadValue<Vector2>().x;
+        moveInput = context.ReadValue<Vector2>();
     }
 }
