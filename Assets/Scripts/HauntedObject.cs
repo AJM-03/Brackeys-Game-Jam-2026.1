@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,11 +16,14 @@ public class HauntedObject : MonoBehaviour
     [SerializeField] private float hauntingDuration = 0.5f;
     [SerializeField] private float hauntingStrength = 1f;
     [SerializeField] private Ease hauntingEase = Ease.InOutSine;
+    [SerializeField] private bool hauntingHappensAfterCapture = false;
 
     private bool hauntingCaptured = false;
     private bool onCamera = false;
     private bool hauntingHappening = false;
     [SerializeField] private float captureTime = 0.2f;
+    [SerializeField][Range(0f, 1f)] private float captureAngle = 0.5f;
+    [SerializeField] private float captureDistance = 5f;
     private float captureTimer = 0;
 
 
@@ -33,7 +37,8 @@ public class HauntedObject : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Instance.objectsCaptured >= capturesRequired)
+        if (GameManager.Instance.objectsCaptured >= capturesRequired &&
+            (!hauntingCaptured || hauntingHappensAfterCapture))
         {
             hauntingTimer -= Time.deltaTime;
             if (hauntingTimer <= 0)
@@ -45,7 +50,7 @@ public class HauntedObject : MonoBehaviour
             }
         }
 
-        if (hauntingHappening && onCamera && !hauntingCaptured)
+        if (hauntingHappening && !hauntingCaptured && OnCamera())
         {
             captureTimer += Time.deltaTime;
         }
@@ -69,6 +74,44 @@ public class HauntedObject : MonoBehaviour
 
         captureTimer = 0;
     }
+
+    private bool OnCamera()
+    {
+        onCamera = true;
+
+        Transform cam = Camera.main.transform;
+        Vector3 lookingAngle = (transform.position - cam.position);  // Angle between the object and the camera
+
+        // Distance
+        float distance = lookingAngle.magnitude;  // Distance between the object and camera
+        //Debug.Log(distance);
+        if (distance > captureDistance)
+            onCamera = false;
+
+        // Angle
+        if (onCamera)
+        {
+            lookingAngle = lookingAngle / distance;  // Normalizes the direction
+            float result = Vector3.Dot(cam.forward, lookingAngle);  // Gets the difference between this angle and camera's forwards direction
+            //Debug.Log(result + "  -  " + lookingAngle);
+            if (result < captureAngle)
+                onCamera = false;
+        }
+
+        // Ray
+        if (onCamera)
+        {
+            Ray ray = new Ray(cam.position, lookingAngle);
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit);
+            Debug.Log(hit.collider.gameObject);
+            if (hit.collider.gameObject != gameObject)
+                onCamera = false;
+        }
+
+        return onCamera;
+    }
+
 
     public void ShakeHaunting()
     {
