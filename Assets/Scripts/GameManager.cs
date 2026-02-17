@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public int objectsCaptured;
+    [HideInInspector] public Door openDoor;
 
     void Start()
     {

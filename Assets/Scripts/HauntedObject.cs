@@ -105,7 +105,7 @@ public class HauntedObject : MonoBehaviour
             Ray ray = new Ray(cam.position, lookingAngle);
             RaycastHit hit;
             Physics.Raycast(ray, out hit);
-            Debug.Log(hit.collider.gameObject);
+            //Debug.Log(hit.collider.gameObject);
             if (hit.collider.gameObject != gameObject)
                 onCamera = false;
         }
