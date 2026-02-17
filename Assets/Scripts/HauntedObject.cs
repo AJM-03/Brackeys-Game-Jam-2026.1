@@ -69,7 +69,8 @@ public class HauntedObject : MonoBehaviour
         {
             hauntingCaptured = true;
             GameManager.Instance.objectsCaptured ++;
-            transform.DOShakeScale(hauntingDuration, hauntingStrength).SetEase(hauntingEase);
+            transform.DOShakeScale(hauntingDuration, hauntingStrength * 1.5f).SetEase(hauntingEase);
+            MusicPlayer.Instance.ChangeSongIntensity(1);
         }
 
         captureTimer = 0;
