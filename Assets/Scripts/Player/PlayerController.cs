@@ -10,8 +10,12 @@ public class PlayerController : MonoBehaviour
     private Transform cam;
 
     [SerializeField] private float movementSpeed = 10f;
+    [SerializeField] private float gravity = -9.81f;
+
 
     private Vector3 moveInput;
+    private bool isGrounded;
+    private float verticalVelocity;
 
 
     private void Start()
@@ -26,6 +30,16 @@ public class PlayerController : MonoBehaviour
         transform.right = cam.right;
         Vector3 move = transform.forward * moveInput.y + transform.right * moveInput.x;
         move *= movementSpeed * Time.deltaTime;
+
+        isGrounded = characterController.isGrounded;
+        if (isGrounded && verticalVelocity < 0)
+        {
+            verticalVelocity = -2f; // Reset velocity when grounded
+        }
+
+        verticalVelocity += gravity * Time.deltaTime;
+        move.y = verticalVelocity * Time.deltaTime;
+
         characterController.Move(move);
     }
 
