@@ -122,6 +122,120 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &72912435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d9f4edcee1a7ee46ab76b774fb64446, type: 3}
+  m_PrefabInstance: {fileID: 763936734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &72912437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72912435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenHaunting: 5
+  maxTimeBetweenHaunting: 20
+  capturesRequired: 0
+  hauntingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 72912437}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.5
+  hauntingStrength: 1
+  hauntingEase: 4
+--- !u!1 &214973283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d6702ee8a69cfce4789bcdfee328b023, type: 3}
+  m_PrefabInstance: {fileID: 249159382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &214973285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214973283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenHaunting: 5
+  maxTimeBetweenHaunting: 20
+  capturesRequired: 0
+  hauntingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 214973285}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.5
+  hauntingStrength: 1
+  hauntingEase: 4
+--- !u!1 &245231268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8417ebab8e981b243ba2f67e2435ccd0, type: 3}
+  m_PrefabInstance: {fileID: 1836761030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &245231272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245231268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenHaunting: 5
+  maxTimeBetweenHaunting: 20
+  capturesRequired: 0
+  hauntingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 245231272}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.5
+  hauntingStrength: 1
+  hauntingEase: 4
 --- !u!1001 &249159382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,7 +291,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d6702ee8a69cfce4789bcdfee328b023, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 214973285}
   m_SourcePrefab: {fileID: 100100000, guid: d6702ee8a69cfce4789bcdfee328b023, type: 3}
 --- !u!1001 &355770662
 PrefabInstance:
@@ -234,8 +351,49 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c916d1b5fbb59f48af3d465e55b2806, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1243601748}
   m_SourcePrefab: {fileID: 100100000, guid: 5c916d1b5fbb59f48af3d465e55b2806, type: 3}
+--- !u!1 &761158291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc152d6f1df5c8d46b466a40e74dc814, type: 3}
+  m_PrefabInstance: {fileID: 908821214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &761158293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761158291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenHaunting: 5
+  maxTimeBetweenHaunting: 20
+  capturesRequired: 0
+  hauntingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 761158293}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.5
+  hauntingStrength: 1
+  hauntingEase: 4
 --- !u!1001 &763936734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -291,7 +449,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d9f4edcee1a7ee46ab76b774fb64446, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 72912437}
   m_SourcePrefab: {fileID: 100100000, guid: 2d9f4edcee1a7ee46ab76b774fb64446, type: 3}
 --- !u!1 &794274973
 GameObject:
@@ -333,6 +494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 864400835}
+  - component: {fileID: 864400836}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -356,6 +518,19 @@ Transform:
   - {fileID: 907495887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &864400836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864400834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b88683d98fb78438a01095c27e6582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsCaptured: 0
 --- !u!1 &907495886
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +692,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dc152d6f1df5c8d46b466a40e74dc814, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 761158293}
   m_SourcePrefab: {fileID: 100100000, guid: dc152d6f1df5c8d46b466a40e74dc814, type: 3}
 --- !u!1001 &909114370
 PrefabInstance:
@@ -574,7 +752,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 45bd3b92d71dc3e45aab29aa3da7e4c7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1363717344}
   m_SourcePrefab: {fileID: 100100000, guid: 45bd3b92d71dc3e45aab29aa3da7e4c7, type: 3}
 --- !u!1 &933172435
 GameObject:
@@ -681,6 +862,44 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933172435}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1016913130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 268a94e92f2a5984cb4bafd4f6f5d923, type: 3}
+  m_PrefabInstance: {fileID: 1440477752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1016913134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016913130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenHaunting: 5
+  maxTimeBetweenHaunting: 20
+  capturesRequired: 0
+  hauntingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1016913134}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.5
+  hauntingStrength: 1
+  hauntingEase: 4
 --- !u!1 &1039468319
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +985,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1157433399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 66d34222e5abd614dbc9e478785e50ac, type: 3}
+  m_PrefabInstance: {fileID: 1170238394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1157433401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157433399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenHaunting: 5
+  maxTimeBetweenHaunting: 20
+  capturesRequired: 0
+  hauntingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1157433401}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.5
+  hauntingStrength: 1
+  hauntingEase: 4
 --- !u!1001 &1170238394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -821,8 +1078,87 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 66d34222e5abd614dbc9e478785e50ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1157433401}
   m_SourcePrefab: {fileID: 100100000, guid: 66d34222e5abd614dbc9e478785e50ac, type: 3}
+--- !u!1 &1243601746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c916d1b5fbb59f48af3d465e55b2806, type: 3}
+  m_PrefabInstance: {fileID: 355770662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1243601748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243601746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenHaunting: 5
+  maxTimeBetweenHaunting: 20
+  capturesRequired: 0
+  hauntingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1243601748}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.5
+  hauntingStrength: 1
+  hauntingEase: 4
+--- !u!1 &1363717340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 45bd3b92d71dc3e45aab29aa3da7e4c7, type: 3}
+  m_PrefabInstance: {fileID: 909114370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1363717344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363717340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenHaunting: 5
+  maxTimeBetweenHaunting: 20
+  capturesRequired: 0
+  hauntingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1363717344}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.5
+  hauntingStrength: 1
+  hauntingEase: 4
 --- !u!1001 &1440477752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -878,7 +1214,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 268a94e92f2a5984cb4bafd4f6f5d923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1016913134}
   m_SourcePrefab: {fileID: 100100000, guid: 268a94e92f2a5984cb4bafd4f6f5d923, type: 3}
 --- !u!1 &1516428577
 GameObject:
@@ -1280,7 +1619,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3902a446a80b4b74abe923e7155ba2ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2134669390}
   m_SourcePrefab: {fileID: 100100000, guid: 3902a446a80b4b74abe923e7155ba2ab, type: 3}
 --- !u!1001 &1836761030
 PrefabInstance:
@@ -1337,7 +1679,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8417ebab8e981b243ba2f67e2435ccd0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 245231272}
   m_SourcePrefab: {fileID: 100100000, guid: 8417ebab8e981b243ba2f67e2435ccd0, type: 3}
 --- !u!1 &1860415229
 GameObject:
@@ -1673,6 +2018,44 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1 &2134669388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3902a446a80b4b74abe923e7155ba2ab, type: 3}
+  m_PrefabInstance: {fileID: 1687064737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134669390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134669388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenHaunting: 5
+  maxTimeBetweenHaunting: 20
+  capturesRequired: 0
+  hauntingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2134669390}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.5
+  hauntingStrength: 1
+  hauntingEase: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
