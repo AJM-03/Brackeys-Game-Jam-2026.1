@@ -41,9 +41,12 @@ public class Door : Interactable
         GameManager.Instance.openDoor = this;
     }
 
-    public void CloseDoor()
+    public void CloseDoor(bool animate = true)
     {
-        rotationPoint.DOLocalRotate(closedRotation, openTime).SetEase(openEase);
+        if (animate)
+            rotationPoint.DOLocalRotate(closedRotation, openTime).SetEase(openEase);
+        else
+            rotationPoint.localRotation = Quaternion.Euler(closedRotation);
         open = false;
         if (GameManager.Instance.openDoor != null && GameManager.Instance.openDoor == this)
             GameManager.Instance.openDoor = null;
