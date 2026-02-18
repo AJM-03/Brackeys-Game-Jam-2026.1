@@ -16,6 +16,7 @@ public class HauntedObject : MonoBehaviour
     [SerializeField] private float hauntingDuration = 0.5f;
     [SerializeField] private float hauntingStrength = 1f;
     [SerializeField] private Ease hauntingEase = Ease.InOutSine;
+    [SerializeField] private GameObject hauntingObj;
     [SerializeField] private bool hauntingHappensAfterCapture = false;
 
     private bool hauntingCaptured = false;
@@ -114,7 +115,7 @@ public class HauntedObject : MonoBehaviour
     }
 
 
-    public void ShakeHaunting()
+    public void BounceHaunting()
     {
         Sequence sequence = DOTween.Sequence();
         sequence.Append(transform.DOMoveY(transform.position.y + hauntingStrength, hauntingDuration / 2).SetEase(Ease.OutSine));
@@ -126,5 +127,19 @@ public class HauntedObject : MonoBehaviour
     public void ShakeHaunting1()
     {
         transform.DOShakePosition(hauntingDuration, hauntingStrength).SetEase(hauntingEase).OnComplete(HauntingEnded);
+    }
+
+    public void FlickerHaunting()
+    {
+        Light light = hauntingObj.GetComponent<Light>();
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(light.DOIntensity(0, 0));
+        sequence.AppendInterval(0.05f);
+        sequence.Append(light.DOIntensity(1, 0));
+        sequence.AppendInterval(0.15f);
+
+        sequence.SetLoops(3);
+        sequence.OnComplete(HauntingEnded);
+        sequence.Play();
     }
 }

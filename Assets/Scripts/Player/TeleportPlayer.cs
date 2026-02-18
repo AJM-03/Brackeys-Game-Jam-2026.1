@@ -12,7 +12,7 @@ public class TeleportPlayer : MonoBehaviour
         if (controller != null)
         {
             controller.enabled = false; // Disable to avoid conflicts
-            other.transform.position = other.transform.position + positionChange;
+            other.transform.position += positionChange;
             controller.enabled = true; // Re-enable after teleport
         }
     }
