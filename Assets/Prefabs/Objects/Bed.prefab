@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1864722c799aca64ba0eae4825a420cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: 2f14efd983dac5241bd6f3e43702d4fd, type: 3}
+  - {fileID: 2100000, guid: a5008dd0b65b886418c313ce7528b785, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -219,10 +219,23 @@ MonoBehaviour:
   capturesRequired: 0
   hauntingEvent:
     m_PersistentCalls:
-      m_Calls: []
-  hauntingDuration: 0.5
-  hauntingStrength: 1
+      m_Calls:
+      - m_Target: {fileID: 5451559731426156289}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.35
+  hauntingStrength: 0.15
   hauntingEase: 4
+  hauntingObj: {fileID: 0}
   hauntingHappensAfterCapture: 0
   captureTime: 0.2
   captureAngle: 0.5
@@ -309,8 +322,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 2f14efd983dac5241bd6f3e43702d4fd, type: 3}
-  - {fileID: -876546973899608171, guid: 2f14efd983dac5241bd6f3e43702d4fd, type: 3}
+  - {fileID: 2100000, guid: 140d4f37e862ee64e83bfd83149dd214, type: 2}
+  - {fileID: 2100000, guid: 59d32b29de637b44080adb855549ac0a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

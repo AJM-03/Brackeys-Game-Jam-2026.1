@@ -219,7 +219,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8567324513876545967}
-  m_Mesh: {fileID: 2584102757377901635, guid: 3f7ecabf66333434d80a7e9d7c0852f7, type: 3}
+  m_Mesh: {fileID: -1948736545029841760, guid: c7762eccb1138044daaf5a49bcb6cd8d, type: 3}
 --- !u!23 &7020563801734715940
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -240,8 +240,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4874126678125670354, guid: 3f7ecabf66333434d80a7e9d7c0852f7, type: 3}
-  - {fileID: -6629797300637803691, guid: 3f7ecabf66333434d80a7e9d7c0852f7, type: 3}
+  - {fileID: 2100000, guid: b944dea7b9b6b2b42b768e0b3d66c0cf, type: 2}
+  - {fileID: 2100000, guid: 1864722c799aca64ba0eae4825a420cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -280,10 +280,23 @@ MonoBehaviour:
   capturesRequired: 0
   hauntingEvent:
     m_PersistentCalls:
-      m_Calls: []
-  hauntingDuration: 0.5
-  hauntingStrength: 1
+      m_Calls:
+      - m_Target: {fileID: 6976135763749171337}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.35
+  hauntingStrength: 0.15
   hauntingEase: 4
+  hauntingObj: {fileID: 0}
   hauntingHappensAfterCapture: 0
   captureTime: 0.2
   captureAngle: 0.5

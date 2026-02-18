@@ -298,6 +298,7 @@ MonoBehaviour:
   openTime: 1.5
   openEase: 4
   rotationPoint: {fileID: 184030236}
+  doorLocked: 0
 --- !u!1 &452347998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1551,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4874126678125670354, guid: 2d9f4edcee1a7ee46ab76b774fb64446, type: 3}
+  - {fileID: 2100000, guid: 3bd4cc3c8b9056543b953c67375fb135, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1602,6 +1603,7 @@ MonoBehaviour:
   openTime: 1.5
   openEase: 4
   rotationPoint: {fileID: 1123225157}
+  doorLocked: 0
 --- !u!1 &1039468319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2438,7 @@ MonoBehaviour:
   openTime: 1.5
   openEase: 4
   rotationPoint: {fileID: 1762625513}
+  doorLocked: 0
 --- !u!1 &1604514082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,28 +3171,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 864400835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &919132147659663347 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-  m_PrefabInstance: {fileID: 3228326578505343809}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &919132148680937807 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-  m_PrefabInstance: {fileID: 3883950282284050125}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2002012078790177928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3356,42 +3337,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bed
       objectReference: {fileID: 0}
-    - target: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-      propertyPath: hauntingDuration
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-      propertyPath: hauntingStrength
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 919132147659663347}
-    - target: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShakeHaunting
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HauntedObject, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3454,28 +3399,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ae617b83aeb3a0498dd7924ad8a753f, type: 3}
---- !u!114 &3469287836984866925 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-  m_PrefabInstance: {fileID: 8850516567871482276}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3469287838163311220 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-  m_PrefabInstance: {fileID: 9097772874288935422}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3883950282284050125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3527,42 +3450,6 @@ PrefabInstance:
     - target: {fileID: 6677478582475397911, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
       propertyPath: m_Name
       value: Drawer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-      propertyPath: hauntingDuration
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-      propertyPath: hauntingStrength
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 919132148680937807}
-    - target: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShakeHaunting
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HauntedObject, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819175762937404633, guid: 34677a8ccc73f5b47986cfcd65a69503, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4073,42 +3960,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-      propertyPath: hauntingDuration
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-      propertyPath: hauntingStrength
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 3469287836984866925}
-    - target: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShakeHaunting
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HauntedObject, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976135763749171337, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8567324513876545967, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
       propertyPath: m_Name
       value: Big picture frame
@@ -4170,42 +4021,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small picture frame
       objectReference: {fileID: 0}
-    - target: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-      propertyPath: hauntingDuration
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-      propertyPath: hauntingStrength
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 3469287838163311220}
-    - target: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShakeHaunting
-      objectReference: {fileID: 0}
-    - target: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HauntedObject, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7425002133228090399, guid: 754b351ba788fe34f908599496f29322, type: 3}
-      propertyPath: hauntingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4220,6 +4035,10 @@ SceneRoots:
   - {fileID: 4403496251358983376}
   - {fileID: 1860415234}
   - {fileID: 1039468321}
+  - {fileID: 2077404121}
+  - {fileID: 1445758894}
+  - {fileID: 1979511525}
+  - {fileID: 880795620}
   - {fileID: 8453901559806884732}
   - {fileID: 8704905869210537894}
   - {fileID: 8114610310083237001}
@@ -4229,9 +4048,6 @@ SceneRoots:
   - {fileID: 5871778633499753390}
   - {fileID: 2906119769890999784}
   - {fileID: 3233775823753671658}
-  - {fileID: 2077404121}
-  - {fileID: 1445758894}
-  - {fileID: 1979511525}
   - {fileID: 3228326578505343809}
   - {fileID: 9097772874288935422}
   - {fileID: 2002012078790177928}
@@ -4243,9 +4059,8 @@ SceneRoots:
   - {fileID: 899225889}
   - {fileID: 758601165}
   - {fileID: 763663534}
-  - {fileID: 880795620}
+  - {fileID: 782237908}
+  - {fileID: 218997152}
   - {fileID: 1972268310}
   - {fileID: 731746156}
   - {fileID: 706782437}
-  - {fileID: 782237908}
-  - {fileID: 218997152}

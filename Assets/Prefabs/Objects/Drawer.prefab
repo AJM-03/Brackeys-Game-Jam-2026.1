@@ -61,8 +61,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 685f9e91da6374a43a833faa57a53d80, type: 3}
-  - {fileID: -3846018093981099296, guid: 685f9e91da6374a43a833faa57a53d80, type: 3}
+  - {fileID: 2100000, guid: c5c18919885bb5844af1df7bda5aedbd, type: 2}
+  - {fileID: 2100000, guid: 8e1bf0047ec2a874491cba9d8b170a4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,7 +145,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4874126678125670354, guid: 685f9e91da6374a43a833faa57a53d80, type: 3}
+  - {fileID: 2100000, guid: 6ad9b5a45df97454eab9429f153f0ee0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -221,10 +221,23 @@ MonoBehaviour:
   capturesRequired: 0
   hauntingEvent:
     m_PersistentCalls:
-      m_Calls: []
-  hauntingDuration: 0.5
-  hauntingStrength: 1
+      m_Calls:
+      - m_Target: {fileID: 8819175762937404633}
+        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
+        m_MethodName: ShakeHaunting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hauntingDuration: 0.35
+  hauntingStrength: 0.15
   hauntingEase: 4
+  hauntingObj: {fileID: 0}
   hauntingHappensAfterCapture: 0
   captureTime: 0.2
   captureAngle: 0.5
@@ -311,7 +324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4874126678125670354, guid: 685f9e91da6374a43a833faa57a53d80, type: 3}
+  - {fileID: 2100000, guid: 6ad9b5a45df97454eab9429f153f0ee0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -394,7 +407,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4874126678125670354, guid: 685f9e91da6374a43a833faa57a53d80, type: 3}
+  - {fileID: 2100000, guid: 6ad9b5a45df97454eab9429f153f0ee0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

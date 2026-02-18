@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2813467912831258332, guid: 3902a446a80b4b74abe923e7155ba2ab, type: 3}
+  - {fileID: 2100000, guid: 59d32b29de637b44080adb855549ac0a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   hauntingDuration: 0.35
   hauntingStrength: 0.15
   hauntingEase: 4
+  hauntingObj: {fileID: 0}
   hauntingHappensAfterCapture: 0
   captureTime: 0.2
   captureAngle: 0.5
@@ -238,7 +239,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2813467912831258332, guid: 3902a446a80b4b74abe923e7155ba2ab, type: 3}
+  - {fileID: 2100000, guid: 59d32b29de637b44080adb855549ac0a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -321,7 +322,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2813467912831258332, guid: 3902a446a80b4b74abe923e7155ba2ab, type: 3}
+  - {fileID: 2100000, guid: 59d32b29de637b44080adb855549ac0a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
