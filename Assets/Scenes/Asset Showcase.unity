@@ -1901,6 +1901,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139518385}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1229582744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.4754353
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.834
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.409859
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
+      propertyPath: m_Name
+      value: Kitchen wall cuboard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1ac1547516d6554dbbbb648bd4f3f44, type: 3}
 --- !u!1 &1430627933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4702,3 +4759,4 @@ SceneRoots:
   - {fileID: 1972268310}
   - {fileID: 731746156}
   - {fileID: 706782437}
+  - {fileID: 1229582744}
