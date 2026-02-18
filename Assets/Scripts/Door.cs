@@ -10,6 +10,7 @@ public class Door : Interactable
     [SerializeField] private float openTime = 1.5f;
     [SerializeField] private Ease openEase = Ease.InOutSine;
     [SerializeField] private Transform rotationPoint;
+    public bool doorLocked;
     private bool open;
 
     public override void Interact()
@@ -24,6 +25,8 @@ public class Door : Interactable
 
     public void OpenDoor()
     {
+        if (doorLocked) return;
+
         Transform cam = Camera.main.transform;
         Vector3 lookingAngle = (transform.position - cam.position).normalized; 
 
