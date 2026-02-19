@@ -1497,7 +1497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3505496270982001271, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.50000024
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3505496270982001271, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1535,7 +1535,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bed
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5451559731426156289, guid: 9f47405119207ad42982b0702ec82d69, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
