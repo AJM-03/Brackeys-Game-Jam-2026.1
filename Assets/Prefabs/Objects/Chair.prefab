@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4612464111360328543
+--- !u!1 &2841924812865282794
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7518327098845260026}
-  - component: {fileID: 5302143250986309991}
-  - component: {fileID: 359970318436068805}
-  - component: {fileID: 2167332587858646533}
-  - component: {fileID: 217651816178711116}
+  - component: {fileID: 1256410042238984554}
+  - component: {fileID: 8101030607935241215}
+  - component: {fileID: 6402511948910070002}
   m_Layer: 0
-  m_Name: Chair
+  m_Name: Chair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7518327098845260026
+--- !u!4 &1256410042238984554
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612464111360328543}
+  m_GameObject: {fileID: 2841924812865282794}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7069834, y: 0, z: 0, w: 0.7072302}
-  m_LocalPosition: {x: 1.58, y: 1.62, z: -7.26}
-  m_LocalScale: {x: 33.877213, y: 34.94728, z: 4.4559765}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.122}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 7518327098845260026}
   m_LocalEulerAnglesHint: {x: 89.98, y: 0, z: 0}
---- !u!33 &5302143250986309991
+--- !u!33 &8101030607935241215
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612464111360328543}
+  m_GameObject: {fileID: 2841924812865282794}
   m_Mesh: {fileID: -6827640314013697367, guid: 268a94e92f2a5984cb4bafd4f6f5d923, type: 3}
---- !u!23 &359970318436068805
+--- !u!23 &6402511948910070002
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612464111360328543}
+  m_GameObject: {fileID: 2841924812865282794}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,44 +83,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2167332587858646533
-MonoBehaviour:
+--- !u!1 &4612464111360328543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7518327098845260026}
+  - component: {fileID: 217651816178711116}
+  m_Layer: 0
+  m_Name: Chair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7518327098845260026
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4612464111360328543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minTimeBetweenHaunting: 5
-  maxTimeBetweenHaunting: 20
-  capturesRequired: 0
-  hauntingEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2167332587858646533}
-        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
-        m_MethodName: ShakeHaunting
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  hauntingDuration: 0.35
-  hauntingStrength: 0.15
-  hauntingEase: 4
-  hauntingObj: {fileID: 0}
-  hauntingHappensAfterCapture: 0
-  captureTime: 0.2
-  captureAngle: 0.5
-  captureDistance: 5
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7069834, y: 0, z: 0, w: 0.7072302}
+  m_LocalPosition: {x: 1.58, y: 1.62, z: -7.26}
+  m_LocalScale: {x: 33.877213, y: 34.94728, z: 4.4559765}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1256410042238984554}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 89.98, y: 0, z: 0}
 --- !u!65 &217651816178711116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -143,4 +136,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.019999998, y: 0.019999994, z: 0.2946535}
-  m_Center: {x: 0, y: 4.0514777e-17, z: -0.022807788}
+  m_Center: {x: 0, y: 4.0514777e-17, z: -0.14}
