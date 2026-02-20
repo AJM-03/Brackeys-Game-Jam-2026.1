@@ -69,7 +69,7 @@ public class HauntedObject : MonoBehaviour
         if (captureTimer >= captureTime && !hauntingCaptured)
         {
             hauntingCaptured = true;
-            GameManager.Instance.objectsCaptured ++;
+            GameManager.Instance.EvidenceFound();
             transform.DOShakeScale(hauntingDuration, hauntingStrength * 1.5f).SetEase(hauntingEase);
             MusicPlayer.Instance.ChangeSongIntensity(1);
         }
