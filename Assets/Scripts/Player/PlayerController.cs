@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         transform.right = cam.right;
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         Vector3 move = transform.forward * moveInput.y + transform.right * moveInput.x;
         move *= movementSpeed * Time.deltaTime;
 

@@ -353,6 +353,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 2800055038864495316, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: baa40d894d297e4438d9079a77234735, type: 3}
     - target: {fileID: 6919961249530234704, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3148,6 +3152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 2800055038864495316, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5650652397a105341b62e069b68e19a5, type: 3}
     - target: {fileID: 8567324513876545967, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
       propertyPath: m_Name
       value: Big picture frame (2)
@@ -4224,6 +4232,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 2800055038864495316, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd29837324d329941be8fdf4fed7207e, type: 3}
     - target: {fileID: 8567324513876545967, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
       propertyPath: m_Name
       value: Big picture frame (1)
