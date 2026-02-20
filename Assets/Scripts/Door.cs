@@ -23,9 +23,9 @@ public class Door : Interactable
             OpenDoor();
     }
 
-    public void OpenDoor()
+    public void OpenDoor(bool overrideLock = false)
     {
-        if (doorLocked) return;
+        if (doorLocked && !overrideLock) return;
 
         Transform cam = Camera.main.transform;
         Vector3 lookingAngle = (transform.position - cam.position).normalized; 
@@ -38,6 +38,8 @@ public class Door : Interactable
 
         rotationPoint.DOLocalRotate(rotation, openTime).SetEase(openEase);
         open = true;
+
+        if (this == GameManager.Instance.frontDoor) return;
 
         if (GameManager.Instance.openDoor != null && GameManager.Instance.openDoor != this)
             GameManager.Instance.openDoor.CloseDoor();
