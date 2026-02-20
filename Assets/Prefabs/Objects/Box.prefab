@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5758880847119074646
+--- !u!1 &464039746764806485
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4352910739472924853}
-  - component: {fileID: 3423236908766480519}
-  - component: {fileID: 2320405262251131153}
+  - component: {fileID: 1034583981835899491}
+  - component: {fileID: 7285973442145884537}
+  - component: {fileID: 8981662796570178311}
   m_Layer: 0
-  m_Name: Sofa (1)
+  m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4352910739472924853
+--- !u!4 &1034583981835899491
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5758880847119074646}
+  m_GameObject: {fileID: 464039746764806485}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0.0099}
+  m_LocalPosition: {x: 0, y: 0.498, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517049927886471094}
+  m_Father: {fileID: 8585812816881000604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3423236908766480519
+--- !u!33 &7285973442145884537
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5758880847119074646}
-  m_Mesh: {fileID: -5495902117074765545, guid: 3902a446a80b4b74abe923e7155ba2ab, type: 3}
---- !u!23 &2320405262251131153
+  m_GameObject: {fileID: 464039746764806485}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8981662796570178311
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5758880847119074646}
+  m_GameObject: {fileID: 464039746764806485}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2813467912831258332, guid: 3902a446a80b4b74abe923e7155ba2ab, type: 3}
+  - {fileID: 2100000, guid: 68a259c704e7c614f9b0a3759313f4fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,7 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7999622522475568755
+--- !u!1 &6995428962148841415
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,38 +91,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 517049927886471094}
-  - component: {fileID: 4366942472764155916}
+  - component: {fileID: 8585812816881000604}
+  - component: {fileID: 5730904417172426140}
   m_Layer: 0
-  m_Name: Sofa
+  m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &517049927886471094
+--- !u!4 &8585812816881000604
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7999622522475568755}
+  m_GameObject: {fileID: 6995428962148841415}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
-  m_LocalPosition: {x: -1.4248769, y: 1.0785856, z: -8.642235}
-  m_LocalScale: {x: 49.252213, y: 134.30867, z: 20.490595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.59, y: 0.889, z: -7.56}
+  m_LocalScale: {x: 1, y: 0.76573, z: 0.78796}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4352910739472924853}
+  - {fileID: 1034583981835899491}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
---- !u!65 &4366942472764155916
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5730904417172426140
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7999622522475568755}
+  m_GameObject: {fileID: 6995428962148841415}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -135,5 +135,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.024022367, y: 0.020360308, z: 0.03072297}
-  m_Center: {x: 0.0014197553, y: -0.000031026142, z: 0.012886988}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.52, z: 0}
