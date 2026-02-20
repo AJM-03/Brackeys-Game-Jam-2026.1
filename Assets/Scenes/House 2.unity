@@ -296,6 +296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 6919961249530234704, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2584102757377901635, guid: 51abd79976db0d7429122cd9d22340ec, type: 3}
     - target: {fileID: 8567324513876545967, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
       propertyPath: m_Name
       value: Big picture frame (3)
