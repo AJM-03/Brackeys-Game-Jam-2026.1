@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public void EvidenceFound()
     {
         objectsCaptured++;
-
+        MusicPlayer.Instance.ChangeSongIntensity(1);
         UpdateEvidence();
     }
 

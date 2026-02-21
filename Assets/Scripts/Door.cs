@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Door : Interactable
 {
@@ -10,6 +11,8 @@ public class Door : Interactable
     [SerializeField] private float openTime = 1.5f;
     [SerializeField] private Ease openEase = Ease.InOutSine;
     [SerializeField] private Transform rotationPoint;
+    [SerializeField] private UnityEvent openEvent;
+    [SerializeField] private UnityEvent closeEvent;
     public bool doorLocked;
     private bool open;
 
@@ -38,6 +41,7 @@ public class Door : Interactable
 
         rotationPoint.DOLocalRotate(rotation, openTime).SetEase(openEase);
         open = true;
+        openEvent.Invoke();
 
         if (this == GameManager.Instance.frontDoor) return;
 
@@ -53,6 +57,7 @@ public class Door : Interactable
         else
             rotationPoint.localRotation = Quaternion.Euler(closedRotation);
         open = false;
+        closeEvent.Invoke();
         if (GameManager.Instance.openDoor != null && GameManager.Instance.openDoor == this)
             GameManager.Instance.openDoor = null;
     }

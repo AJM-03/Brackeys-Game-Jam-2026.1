@@ -1113,11 +1113,68 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 265057833}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LeftHallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorHaunting, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+--- !u!1 &265057827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 372005240969985897, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+  m_PrefabInstance: {fileID: 960531429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &265057833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265057827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50a3ad23f7e082449b9eae345d81299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timedHaunting: 0
+  minTimeBetweenHaunting: 0
+  maxTimeBetweenHaunting: 0
+  capturesRequired: 0
+  hauntingDuration: 0
+  hauntingHappensAfterCapture: 0
+  captureTime: 0
+  captureAngle: 0
+  captureDistance: 0
+  hallway: {fileID: 103122861}
+  hauntedHallway: {fileID: 66064465}
+  timesDoorMustBeOpened: 3
 --- !u!1 &269092838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,14 +3252,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6995428962148841415, guid: 8fe9ea0b3d293d547a93506571d9b760, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 819162781}
+      addedObject: {fileID: 819162783}
   m_SourcePrefab: {fileID: 100100000, guid: 8fe9ea0b3d293d547a93506571d9b760, type: 3}
 --- !u!4 &819162779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8585812816881000604, guid: 8fe9ea0b3d293d547a93506571d9b760, type: 3}
   m_PrefabInstance: {fileID: 819162778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &819162781
+--- !u!114 &819162783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3211,17 +3268,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 660158060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3c98d3ba10700a41ad97df85b75fe63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenHaunting: 5
-  maxTimeBetweenHaunting: 20
+  timedHaunting: 1
+  minTimeBetweenHaunting: 3
+  maxTimeBetweenHaunting: 6
   capturesRequired: 0
   hauntingDuration: 0.5
   hauntingHappensAfterCapture: 0
   captureTime: 0.2
   captureAngle: 0.5
-  captureDistance: 5
+  captureDistance: 2
+  hauntingStrength: 1
 --- !u!1 &836010291
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,10 +3726,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 265057833}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DoorOpened
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorHaunting, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367510692564435071, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      propertyPath: openEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 372005240969985897, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 265057833}
   m_SourcePrefab: {fileID: 100100000, guid: bf00d07403470ad4a9b5091c4edfec68, type: 3}
 --- !u!1001 &966768308
 PrefabInstance:
@@ -5002,7 +5092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b88683d98fb78438a01095c27e6582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evidenceRequired: 0
+  evidenceRequired: 3
   objectsCaptured: 0
   frontDoor: {fileID: 529362684}
   openDoor: {fileID: 0}
@@ -5097,6 +5187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31550a23fa5e8b741ad2b064daf8b0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timedHaunting: 1
   minTimeBetweenHaunting: 10
   maxTimeBetweenHaunting: 20
   capturesRequired: 0

@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 public class HauntedObject : MonoBehaviour
 {
+    [SerializeField] private bool timedHaunting = true;
     [SerializeField] private float minTimeBetweenHaunting = 5f;
     [SerializeField] private float maxTimeBetweenHaunting = 20f;
     [SerializeField] private int capturesRequired = 0;
@@ -14,7 +15,7 @@ public class HauntedObject : MonoBehaviour
     [SerializeField] protected float hauntingDuration = 0.5f;
     [SerializeField] private bool hauntingHappensAfterCapture = false;
 
-    private bool hauntingCaptured = false;
+    protected bool hauntingCaptured = false;
     private bool onCamera = false;
     private bool hauntingHappening = false;
     [SerializeField] private float captureTime = 0.2f;
@@ -33,6 +34,7 @@ public class HauntedObject : MonoBehaviour
 
     void Update()
     {
+        if (!timedHaunting) return;
         if (GameManager.Instance.objectsCaptured >= capturesRequired &&
             (!hauntingCaptured || hauntingHappensAfterCapture))
         {
@@ -66,7 +68,6 @@ public class HauntedObject : MonoBehaviour
             hauntingCaptured = true;
             GameManager.Instance.EvidenceFound();
             transform.DOShakeScale(hauntingDuration, 2f).SetEase(Ease.InOutSine);
-            MusicPlayer.Instance.ChangeSongIntensity(1);
         }
 
         captureTimer = 0;
