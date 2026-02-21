@@ -11,12 +11,7 @@ public class HauntedObject : MonoBehaviour
     [SerializeField] private float maxTimeBetweenHaunting = 20f;
     [SerializeField] private int capturesRequired = 0;
     private float hauntingTimer;
-
-    [SerializeField] private UnityEvent hauntingEvent;
-    [SerializeField] private float hauntingDuration = 0.5f;
-    [SerializeField] private float hauntingStrength = 1f;
-    [SerializeField] private Ease hauntingEase = Ease.InOutSine;
-    [SerializeField] private GameObject hauntingObj;
+    [SerializeField] protected float hauntingDuration = 0.5f;
     [SerializeField] private bool hauntingHappensAfterCapture = false;
 
     private bool hauntingCaptured = false;
@@ -46,7 +41,7 @@ public class HauntedObject : MonoBehaviour
             {
                 hauntingHappening = true;
                 captureTimer = 0;
-                hauntingEvent.Invoke();
+                HauntingEvent();
                 ResetHauntingTimer();
             }
         }
@@ -62,7 +57,7 @@ public class HauntedObject : MonoBehaviour
         hauntingTimer = Random.Range(minTimeBetweenHaunting, maxTimeBetweenHaunting);
     }
 
-    private void HauntingEnded()
+    protected virtual void HauntingEnded()
     {
         hauntingHappening = false;
 
@@ -70,7 +65,7 @@ public class HauntedObject : MonoBehaviour
         {
             hauntingCaptured = true;
             GameManager.Instance.EvidenceFound();
-            transform.DOShakeScale(hauntingDuration, hauntingStrength * 1.5f).SetEase(hauntingEase);
+            transform.DOShakeScale(hauntingDuration, 2f).SetEase(Ease.InOutSine);
             MusicPlayer.Instance.ChangeSongIntensity(1);
         }
 
@@ -115,31 +110,8 @@ public class HauntedObject : MonoBehaviour
     }
 
 
-    public void BounceHaunting()
+    public virtual void HauntingEvent()
     {
-        Sequence sequence = DOTween.Sequence();
-        sequence.Append(transform.DOMoveY(transform.position.y + hauntingStrength, hauntingDuration / 2).SetEase(Ease.OutSine));
-        sequence.Append(transform.DOMoveY(transform.position.y, hauntingDuration / 2).SetEase(Ease.InSine).OnComplete(HauntingEnded));
 
-        sequence.Play();
-    }
-
-    public void ShakeHaunting1()
-    {
-        transform.DOShakePosition(hauntingDuration, hauntingStrength).SetEase(hauntingEase).OnComplete(HauntingEnded);
-    }
-
-    public void FlickerHaunting()
-    {
-        Light light = hauntingObj.GetComponent<Light>();
-        Sequence sequence = DOTween.Sequence();
-        sequence.Append(light.DOIntensity(0, 0));
-        sequence.AppendInterval(0.05f);
-        sequence.Append(light.DOIntensity(1, 0));
-        sequence.AppendInterval(0.15f);
-
-        sequence.SetLoops(3);
-        sequence.OnComplete(HauntingEnded);
-        sequence.Play();
     }
 }
