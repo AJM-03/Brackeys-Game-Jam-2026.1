@@ -19,6 +19,7 @@ public class HauntedObject : MonoBehaviour
     private bool onCamera = false;
     private bool hauntingHappening = false;
     [SerializeField] private float captureTime = 0.2f;
+    [SerializeField] private float captureBounce = 2f;
     [SerializeField][Range(0f, 1f)] private float captureAngle = 0.5f;
     [SerializeField] private float captureDistance = 5f;
     private float captureTimer = 0;
@@ -67,7 +68,7 @@ public class HauntedObject : MonoBehaviour
         {
             hauntingCaptured = true;
             GameManager.Instance.EvidenceFound();
-            transform.DOShakeScale(hauntingDuration, 2f).SetEase(Ease.InOutSine);
+            transform.DOShakeScale(hauntingDuration, captureBounce).SetEase(Ease.InOutSine);
         }
 
         captureTimer = 0;
