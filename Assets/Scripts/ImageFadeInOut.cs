@@ -9,7 +9,7 @@ public class ImageFadeInOut : MonoBehaviour
     public float fadeSpeed = 0.5f;
     public Ease fadeEase = Ease.InOutSine;
 
-    void Start()
+    void Awake()
     {
         Sequence sequence = DOTween.Sequence();
         Image image = GetComponent<Image>();

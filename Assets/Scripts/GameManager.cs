@@ -22,6 +22,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float eBarFillSpeed = 0.15f;
     [SerializeField] private Ease eBarFillEase = Ease.InOutSine;
 
+    [SerializeField] private Image recordingImage;
+    [SerializeField] private Sprite recordingSprite;
+    [SerializeField] private Sprite pausedSprite;
+
+    [SerializeField] private GameObject pauseScreen;
+    private bool gamePaused;
+
     [SerializeField] private Image screenFade;
     [SerializeField] private float screenFadeSpeed = 0.25f;
     [SerializeField] private string nextSceneName;
@@ -77,5 +84,36 @@ public class GameManager : MonoBehaviour
     private void LoadNext()
     {
         SceneManager.LoadScene(nextSceneName);
+    }
+
+    public void PauseGame()
+    {
+        if (gamePaused)
+        {
+            UnpauseGame();
+            return;
+        }
+        gamePaused = true;
+        pauseScreen.SetActive(true);
+        recordingImage.sprite = pausedSprite;
+        recordingImage.GetComponent<ImageFadeInOut>().enabled = false;
+        recordingImage.DOKill();
+        Color tempColor = recordingImage.color;
+        tempColor.a = 1;
+        recordingImage.color = tempColor;
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void UnpauseGame()
+    {
+        gamePaused = false;
+        recordingImage.sprite = recordingSprite;
+        recordingImage.GetComponent<ImageFadeInOut>().enabled = true;
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        pauseScreen.SetActive(false);
     }
 }
