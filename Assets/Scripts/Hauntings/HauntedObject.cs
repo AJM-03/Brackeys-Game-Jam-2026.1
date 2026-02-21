@@ -18,6 +18,7 @@ public class HauntedObject : MonoBehaviour
     protected bool hauntingCaptured = false;
     private bool onCamera = false;
     private bool hauntingHappening = false;
+    [SerializeField] private bool useRays = true;
     [SerializeField] private float captureTime = 0.2f;
     [SerializeField] private float captureBounce = 2f;
     [SerializeField][Range(0f, 1f)] private float captureAngle = 0.5f;
@@ -98,7 +99,7 @@ public class HauntedObject : MonoBehaviour
         }
 
         // Ray
-        if (onCamera)
+        if (onCamera && useRays)
         {
             Ray ray = new Ray(cam.position, lookingAngle);
             RaycastHit hit;

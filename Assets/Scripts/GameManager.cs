@@ -49,18 +49,15 @@ public class GameManager : MonoBehaviour
     public void EvidenceFound()
     {
         objectsCaptured++;
-        MusicPlayer.Instance.ChangeSongIntensity(1);
         UpdateEvidence();
     }
 
     private void UpdateEvidence()
     {
         float e = Mathf.InverseLerp(0, evidenceRequired, objectsCaptured);
-        Debug.Log(e+"1");
         e = Mathf.Lerp(0, 100, e);
 
         if (evidenceRequired == 0) e = 100;
-        Debug.Log(e + "2");
 
         eBar.DOKill();
         eBar.DOValue(e, eBarFillSpeed).SetEase(eBarFillEase);
@@ -73,6 +70,13 @@ public class GameManager : MonoBehaviour
             eBarText.text = "ENOUGH EVIDENCE\nLEAVE THE HOUSE";
             frontDoor.OpenDoor(true);
         }
+
+        if (e < 30)
+            MusicPlayer.Instance.ChangeSongIntensity(0);
+        else if (e < 60)
+            MusicPlayer.Instance.ChangeSongIntensity(1);
+        else
+            MusicPlayer.Instance.ChangeSongIntensity(2);
     }
 
     public void EndDay()

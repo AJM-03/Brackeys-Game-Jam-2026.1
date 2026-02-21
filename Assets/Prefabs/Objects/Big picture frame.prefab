@@ -188,7 +188,6 @@ GameObject:
   - component: {fileID: 1578409211819398273}
   - component: {fileID: 6919961249530234704}
   - component: {fileID: 7020563801734715940}
-  - component: {fileID: 6976135763749171337}
   m_Layer: 0
   m_Name: Big picture frame
   m_TagString: Untagged
@@ -263,41 +262,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6976135763749171337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8567324513876545967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dae247b71819e0d4dad074be463279f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minTimeBetweenHaunting: 5
-  maxTimeBetweenHaunting: 20
-  capturesRequired: 0
-  hauntingEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6976135763749171337}
-        m_TargetAssemblyTypeName: HauntedObject, Assembly-CSharp
-        m_MethodName: ShakeHaunting
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  hauntingDuration: 0.35
-  hauntingStrength: 0.15
-  hauntingEase: 4
-  hauntingObj: {fileID: 0}
-  hauntingHappensAfterCapture: 0
-  captureTime: 0.2
-  captureAngle: 0.5
-  captureDistance: 5
