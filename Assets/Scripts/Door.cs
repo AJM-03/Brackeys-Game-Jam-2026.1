@@ -13,8 +13,14 @@ public class Door : Interactable
     [SerializeField] private Transform rotationPoint;
     [SerializeField] private UnityEvent openEvent;
     [SerializeField] private UnityEvent closeEvent;
+    private AudioSource sound;
     public bool doorLocked;
     private bool open;
+
+    private void Start()
+    {
+        sound = gameObject.GetComponent<AudioSource>();
+    }
 
     public override void Interact()
     {
@@ -43,6 +49,8 @@ public class Door : Interactable
         open = true;
         openEvent.Invoke();
 
+        sound.Play();
+
         if (this == GameManager.Instance.frontDoor) return;
 
         if (GameManager.Instance.openDoor != null && GameManager.Instance.openDoor != this)
@@ -53,11 +61,15 @@ public class Door : Interactable
     public void CloseDoor(bool animate = true)
     {
         if (animate)
+        {
             rotationPoint.DOLocalRotate(closedRotation, openTime).SetEase(openEase);
+            sound.Play();
+        }
         else
             rotationPoint.localRotation = Quaternion.Euler(closedRotation);
         open = false;
         closeEvent.Invoke();
+
         if (GameManager.Instance.openDoor != null && GameManager.Instance.openDoor == this)
             GameManager.Instance.openDoor = null;
     }

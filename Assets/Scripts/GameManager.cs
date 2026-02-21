@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else if (Instance != this) Destroy(this);
 
+        pauseScreen.GetComponent<PauseMenu>().Init();
+
         Color tempColor = screenFade.color;
         tempColor.a = 1;
         screenFade.color = tempColor;
@@ -99,6 +101,7 @@ public class GameManager : MonoBehaviour
         }
         gamePaused = true;
         pauseScreen.SetActive(true);
+        pauseScreen.GetComponent<AudioSource>().PlayOneShot(pauseScreen.GetComponent<PauseMenu>().pauseSound);
         recordingImage.sprite = pausedSprite;
         recordingImage.GetComponent<ImageFadeInOut>().enabled = false;
         recordingImage.DOKill();
@@ -113,6 +116,7 @@ public class GameManager : MonoBehaviour
     public void UnpauseGame()
     {
         gamePaused = false;
+        pauseScreen.GetComponent<AudioSource>().PlayOneShot(pauseScreen.GetComponent<PauseMenu>().unpauseSound);
         recordingImage.sprite = recordingSprite;
         recordingImage.GetComponent<ImageFadeInOut>().enabled = true;
         Time.timeScale = 1;

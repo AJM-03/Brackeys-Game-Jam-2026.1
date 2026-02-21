@@ -14,7 +14,10 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private Slider movementSlider;
 
-    private void Start()
+    public AudioClip pauseSound;
+    public AudioClip unpauseSound;
+
+    public void Init()
     {
         // Volume
         float savedVolume = PlayerPrefs.GetFloat("Volume", 0.75f);
@@ -55,7 +58,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Exit()
     {
-        Application.Quit();
+        //Application.Quit();
         SceneManager.LoadScene(0);
     }
 

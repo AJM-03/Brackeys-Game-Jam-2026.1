@@ -20,10 +20,13 @@ public class HauntedObject : MonoBehaviour
     private bool hauntingHappening = false;
     [SerializeField] private bool useRays = true;
     [SerializeField] private float captureTime = 0.2f;
-    [SerializeField] private float captureBounce = 2f;
+    //[SerializeField] private float captureBounce = 2f;
     [SerializeField][Range(0f, 1f)] private float captureAngle = 0.5f;
     [SerializeField] private float captureDistance = 5f;
     private float captureTimer = 0;
+
+    [SerializeField] private ParticleSystem capturingParticles;
+    [SerializeField] private ParticleSystem capturedParticles;
 
 
     void Awake()
@@ -52,8 +55,11 @@ public class HauntedObject : MonoBehaviour
 
         if (hauntingHappening && !hauntingCaptured && OnCamera())
         {
+            if (capturingParticles && !capturingParticles.isPlaying) capturingParticles.Play();
             captureTimer += Time.deltaTime;
         }
+        else if (capturingParticles && capturingParticles.isPlaying) 
+            capturingParticles.Stop();
     }
 
     private void ResetHauntingTimer()
@@ -69,7 +75,12 @@ public class HauntedObject : MonoBehaviour
         {
             hauntingCaptured = true;
             GameManager.Instance.EvidenceFound();
-            transform.DOShakeScale(hauntingDuration, captureBounce).SetEase(Ease.InOutSine);
+            //transform.DOShakeScale(hauntingDuration, captureBounce).SetEase(Ease.InOutSine);
+            if (capturedParticles)
+            {
+                capturedParticles.Play();
+                capturedParticles.GetComponent<AudioSource>().Play();
+            }
         }
 
         captureTimer = 0;
