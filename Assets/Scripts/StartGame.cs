@@ -12,11 +12,12 @@ public class StartGame : MonoBehaviour
     [SerializeField] private float screenFadeSpeed = 0.25f;
     private string nextSceneName;
 
-    private void Awake()
+    public void Start()
     {
         Color tempColor = screenFade.color;
         tempColor.a = 1;
         screenFade.color = tempColor;
+        screenFade.DOKill();
         screenFade.DOFade(0, screenFadeSpeed).SetEase(Ease.OutSine);
     }
 
@@ -26,8 +27,8 @@ public class StartGame : MonoBehaviour
         starting = true;
         nextSceneName = sceneName;
 
-        screenFade.DOFade(1, screenFadeSpeed / 2).SetEase(Ease.InSine).OnComplete(LoadNext);
-
+        screenFade.DOKill();
+        screenFade.DOFade(1, screenFadeSpeed).SetEase(Ease.InSine).OnComplete(LoadNext);
     }
 
     private void LoadNext()

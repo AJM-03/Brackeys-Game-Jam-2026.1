@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 796728727}
   - component: {fileID: 796728726}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Screen Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1036,6 +1036,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a60079c2-a95d-4395-87b0-345603adc571
     m_ActionName: Menu/3[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0af768c4-4e4a-4bcd-8914-236a3c50e7f8
+    m_ActionName: Player/Pause[/Keyboard/escape,/Keyboard/p,/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Menu
