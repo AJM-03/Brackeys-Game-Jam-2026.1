@@ -417,6 +417,7 @@ Transform:
   - {fileID: 79229330}
   - {fileID: 109100853}
   - {fileID: 1879795636}
+  - {fileID: 964436049}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &79229326
@@ -3764,7 +3765,7 @@ MonoBehaviour:
   useRays: 0
   captureTime: 0.05
   captureAngle: 0.5
-  captureDistance: 2
+  captureDistance: 2.5
   capturingParticles: {fileID: 874717456}
   capturedParticles: {fileID: 1691204971}
   bounceHeight: 0.65
@@ -4864,7 +4865,7 @@ MonoBehaviour:
   useRays: 1
   captureTime: 0.2
   captureAngle: 0.5
-  captureDistance: 2
+  captureDistance: 3
   capturingParticles: {fileID: 146563154}
   capturedParticles: {fileID: 624562963}
   bounceHeight: 1
@@ -5592,7 +5593,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 66064466}
     m_Modifications:
     - target: {fileID: 6995428962148841415, guid: 8fe9ea0b3d293d547a93506571d9b760, type: 3}
       propertyPath: m_Name
@@ -5655,6 +5656,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fe9ea0b3d293d547a93506571d9b760, type: 3}
+--- !u!4 &964436049 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8585812816881000604, guid: 8fe9ea0b3d293d547a93506571d9b760, type: 3}
+  m_PrefabInstance: {fileID: 964436048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &966768308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8744,6 +8750,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 2800055038864495316, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aafe2cc1db2bd8644814120759c89552, type: 3}
     - target: {fileID: 8567324513876545967, guid: 3c896f30f4475ab429042e7ed679e95d, type: 3}
       propertyPath: m_Name
       value: Big picture frame (1)
@@ -11135,7 +11145,7 @@ MonoBehaviour:
   useRays: 1
   captureTime: 0.5
   captureAngle: 0.5
-  captureDistance: 3
+  captureDistance: 3.5
   capturingParticles: {fileID: 554040780}
   capturedParticles: {fileID: 1907334679}
   lightbulb: {fileID: 2133785341}
@@ -12848,6 +12858,5 @@ SceneRoots:
   - {fileID: 574316636}
   - {fileID: 1749971529}
   - {fileID: 219686470}
-  - {fileID: 964436048}
   - {fileID: 1010745404}
   - {fileID: 1283798730}
