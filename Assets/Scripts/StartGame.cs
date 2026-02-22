@@ -12,6 +12,14 @@ public class StartGame : MonoBehaviour
     [SerializeField] private float screenFadeSpeed = 0.25f;
     private string nextSceneName;
 
+    private void Awake()
+    {
+        Color tempColor = screenFade.color;
+        tempColor.a = 1;
+        screenFade.color = tempColor;
+        screenFade.DOFade(0, screenFadeSpeed).SetEase(Ease.OutSine);
+    }
+
     public void ClickStart(string sceneName)
     {
         if (starting) return;
